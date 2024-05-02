@@ -10,5 +10,7 @@
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("helpers/model1.context.tt")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("helpers/model1.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("helpers/modelpractice.context.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("helpers/modelpractice.tt")]
 
 

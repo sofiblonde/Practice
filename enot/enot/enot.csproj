@@ -77,7 +77,7 @@
     </Compile>
     <Compile Include="Helpers\AppHelper.cs" />
     <Compile Include="Helpers\Employees.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ModelPractice.tt</DependentUpon>
     </Compile>
     <Compile Include="Helpers\Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -94,17 +94,32 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\ModelPractice.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelPractice.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\ModelPractice.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelPractice.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\ModelPractice.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelPractice.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\Orders.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ModelPractice.tt</DependentUpon>
     </Compile>
     <Compile Include="Helpers\Roles.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ModelPractice.tt</DependentUpon>
     </Compile>
     <Compile Include="Helpers\Statuses.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ModelPractice.tt</DependentUpon>
     </Compile>
     <Compile Include="Helpers\Users.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ModelPractice.tt</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -185,6 +200,13 @@
     <None Include="Helpers\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>
+    <EntityDeploy Include="Helpers\ModelPractice.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelPractice.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Helpers\ModelPractice.edmx.diagram">
+      <DependentUpon>ModelPractice.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -207,6 +229,16 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Helpers\ModelPractice.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelPractice.edmx</DependentUpon>
+      <LastGenOutput>ModelPractice.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Helpers\ModelPractice.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelPractice.edmx</DependentUpon>
+      <LastGenOutput>ModelPractice.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

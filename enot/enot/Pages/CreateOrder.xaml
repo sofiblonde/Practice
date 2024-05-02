@@ -1,0 +1,44 @@
+﻿<Page x:Class="enot.Pages.CreateOrder"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:enot.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="CreateOrder"
+      Background="#00AB6F">
+
+    <Grid>
+        <StackPanel Orientation="Vertical"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    x:Name="SpAddOrder">
+            <TextBlock Text="Создание заявки" TextAlignment="Center" Style="{StaticResource TxbStyle}"/>
+            <StackPanel Orientation="Horizontal"
+                        Margin="5">
+                <TextBlock Text="Тип оборудования"
+                           Width="130" Style="{StaticResource TxbStyle}"/>
+                <TextBox Width="150" Style="{StaticResource TxtBox}"
+                         Text="{Binding OrderEquipment}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal"
+                        Margin="5">
+                <TextBlock Text="Тип неисправности"
+                           Width="130" Style="{StaticResource TxbStyle}"/>
+                <TextBox Width="150" Style="{StaticResource TxtBox}"
+                         Text="{Binding OrderTrouble}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal"
+                        Margin="5">
+                <TextBlock Text="Описание проблемы"
+                           Width="130" Style="{StaticResource TxbStyle}"/>
+                <TextBox Width="150"
+                         Height="50" TextWrapping="Wrap" Style="{StaticResource TxtBox}"
+                         Text="{Binding OrderTroubleDescription}"/>
+            </StackPanel>
+            <Button x:Name="BtnSave" Content="Сохранить"
+                    Click="BtnSave_Click" Margin="5" Style="{StaticResource BtnStyle}"/>
+        </StackPanel>
+    </Grid>
+</Page>

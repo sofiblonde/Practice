@@ -36,7 +36,7 @@ namespace enot.Pages
 
         private void BtnMyOrders_Click(object sender, RoutedEventArgs e)
         {
-
+            AppHelper.UserFrame.Navigate(new UserOrders(usr));
         }
 
         private void BtnCreateOrder_Click(object sender, RoutedEventArgs e)

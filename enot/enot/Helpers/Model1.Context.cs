@@ -13,10 +13,10 @@ namespace enot.Helpers
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class RegistrationOfApplicationsEntities : DbContext
+    public partial class lesuser27Entities27 : DbContext
     {
-        public RegistrationOfApplicationsEntities()
-            : base("name=RegistrationOfApplicationsEntities")
+        public lesuser27Entities27()
+            : base("name=lesuser27Entities27")
         {
         }
     

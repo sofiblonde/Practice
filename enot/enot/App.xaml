@@ -38,5 +38,14 @@
             <Setter Property="Margin" Value="5"/>
             <Setter Property="Foreground" Value="#35D59D"/>
         </Style>
+        <Style TargetType="ComboBox" x:Key="CmbBox">
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="Background" Value="White" />
+            <Setter Property="BorderBrush" Value="DarkGray" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="Padding" Value="5" />
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="FontSize" Value="12" />
+        </Style>
     </Application.Resources>
 </Application>

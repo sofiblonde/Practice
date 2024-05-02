@@ -1,0 +1,45 @@
+﻿using enot.Helpers;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+namespace enot.Pages
+{
+    /// <summary>
+    /// Логика взаимодействия для UserOrders.xaml
+    /// </summary>
+    public partial class UserOrders : Page
+    {
+        public UserOrders(Users user)
+        {
+            InitializeComponent();
+            DgOrders.ItemsSource = AppHelper.DbConnect.Orders.Where(x => x.OrderUser == user.UserID).ToList();
+        }
+
+        private void ChangeOrder_Click(object sender, RoutedEventArgs e)
+        {
+            AppHelper.UserFrame.Navigate(new UserEditOrder((sender as Button).DataContext as Orders));
+        }
+
+        private void DeleteOrder_Click(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show("Отменить заявку?", "Отмена заявки", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                AppHelper.DbConnect.Orders.Remove((sender as Button).DataContext as Orders);
+                AppHelper.DbConnect.SaveChanges();
+                DgOrders.ItemsSource = AppHelper.DbConnect.Orders.ToList();
+            }
+        }
+    }
+}

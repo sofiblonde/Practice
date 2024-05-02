@@ -11,7 +11,7 @@ namespace enot.Helpers
     public static class AppHelper
     {
         public static Frame MainFrame = new Frame();
-        public static RegistrationOfApplicationsEntities DbConnect = new RegistrationOfApplicationsEntities();
+        public static lesuser27Entities27 DbConnect = new lesuser27Entities27();
         public static Frame UserFrame = new Frame();
     }
 }

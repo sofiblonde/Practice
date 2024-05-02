@@ -10,17 +10,13 @@
       Background="#00AB6F">
 
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.4*"/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.1*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
         <TextBlock Text="ООО Техносервис" VerticalAlignment="Center"   
-               HorizontalAlignment="Left"
+               HorizontalAlignment="Center"
                FontSize="25" Style="{StaticResource TxbStyle}" Width="320" Height="40" Margin="11,0,0,0" Grid.Column="1"/>
 
         <DataGrid Grid.Row="1" Grid.Column="1"
@@ -63,7 +59,20 @@
                                CanUserSort="False"
                                     Width="*"
                                     Binding="{Binding Employees.Users.UserFIO}"/>
-
+                <DataGridTemplateColumn Header="Действия">
+                    <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button x:Name="ChangeOrder_Click" Content="Изменить"
+                                        Click="ChangeOrder_Click"
+                                        Style="{StaticResource BtnStyle}"/>
+                                <Button x:Name="DeleteOrder" Content="Удалить"
+                                        Click="DeleteOrder_Click"
+                                        Style="{StaticResource BtnStyle}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

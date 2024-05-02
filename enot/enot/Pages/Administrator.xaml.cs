@@ -21,10 +21,29 @@ namespace enot.Pages
     /// </summary>
     public partial class Administrator : Page
     {
+
+
         public Administrator()
         {
             InitializeComponent();
+
             DgOrders.ItemsSource = AppHelper.DbConnect.Orders.ToList();
+
+        }
+
+        private void ChangeOrder_Click(object sender, RoutedEventArgs e)
+        {
+            AppHelper.MainFrame.Navigate(new EditOrder((sender as Button).DataContext as Orders));
+        }
+
+        private void DeleteOrder_Click(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show("Удалить заявку?", "Удаление заявки", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                AppHelper.DbConnect.Orders.Remove((sender as Button).DataContext as Orders);
+                AppHelper.DbConnect.SaveChanges();
+                DgOrders.ItemsSource = AppHelper.DbConnect.Orders.ToList();
+            }
         }
     }
 }

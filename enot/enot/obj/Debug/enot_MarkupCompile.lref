@@ -1,8 +1,11 @@
 ﻿
-FC:\Users\sofia\Desktop\11111\enot\enot\App.xaml;;
-FC:\Users\sofia\Desktop\11111\enot\enot\MainWindow.xaml;;
-FC:\Users\sofia\Desktop\11111\enot\enot\Pages\Administrator.xaml;;
-FC:\Users\sofia\Desktop\11111\enot\enot\Pages\Authorisation.xaml;;
-FC:\Users\sofia\Desktop\11111\enot\enot\Pages\CreateOrder.xaml;;
-FC:\Users\sofia\Desktop\11111\enot\enot\Pages\User.xaml;;
+FE:\Practice\enot\enot\App.xaml;;
+FE:\Practice\enot\enot\MainWindow.xaml;;
+FE:\Practice\enot\enot\Pages\Administrator.xaml;;
+FE:\Practice\enot\enot\Pages\Authorisation.xaml;;
+FE:\Practice\enot\enot\Pages\CreateOrder.xaml;;
+FE:\Practice\enot\enot\Pages\EditOrder.xaml;;
+FE:\Practice\enot\enot\Pages\User.xaml;;
+FE:\Practice\enot\enot\Pages\UserEditOrder.xaml;;
+FE:\Practice\enot\enot\Pages\UserOrders.xaml;;
 
